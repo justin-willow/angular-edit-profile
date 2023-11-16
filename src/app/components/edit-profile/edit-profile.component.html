@@ -1,0 +1,42 @@
+<div class="edit-profile-container">
+  <h2>Edit Profile</h2>
+  <form (submit)="onSubmit()" class="profile-form">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input
+        type="text"
+        id="name"
+        [(ngModel)]="userProfile.name"
+        name="name"
+        class="form-control"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="contact">Contact:</label>
+      <input
+        type="text"
+        id="contact"
+        [(ngModel)]="userProfile.contact"
+        name="contact"
+        class="form-control"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="bio">Bio:</label>
+      <textarea
+        id="bio"
+        [(ngModel)]="userProfile.bio"
+        name="bio"
+        rows="4"
+        class="form-control"
+        required
+      ></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+  </form>
+</div>
